@@ -39,8 +39,8 @@ skillsHeader.forEach((el) => {
     el.addEventListener('click', toggleSkills)
 })
 
-const tabs = document.querySelectorAll('[data-target]'),
-        tabContents = document.querySelectorAll('[data-content]')
+const tabs = document.querySelectorAll('[data-target]')
+const tabContents = document.querySelectorAll('[data-content]')
 tabs.forEach(tab => {
     tab.addEventListener('click', () => {
         const target = document.querySelector(tab.dataset.target)
@@ -56,7 +56,7 @@ tabs.forEach(tab => {
 })
 
 const modalViews = document.querySelectorAll('.services__modal')
-const modalBtns = document.querySelectorAll('services__button')
+const modalBtns = document.querySelectorAll('.services__button')
 const modalCloses = document.querySelectorAll('.services__modal-close')
 
 let modal = function(modalClick) {
@@ -77,3 +77,16 @@ modalCloses.forEach((modalClose) => {
         })
     })
 })
+
+let swiper = new Swiper(".portfolio__container", {
+    cssMode: true,
+    navigation: {
+      nextEl: ".swiper-button-next",
+      prevEl: ".swiper-button-prev",
+    },
+    pagination: {
+      el: ".swiper-pagination",
+    },
+    mousewheel: true,
+    keyboard: true,
+  });
