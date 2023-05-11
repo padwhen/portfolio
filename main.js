@@ -78,7 +78,7 @@ modalCloses.forEach((modalClose) => {
     })
 })
 
-let swiper = new Swiper(".portfolio__container", {
+var swiper = new Swiper(".portfolio__container", {
     cssMode: true,
     navigation: {
       nextEl: ".swiper-button-next",
